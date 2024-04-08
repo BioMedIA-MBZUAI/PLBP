@@ -1,0 +1,45 @@
+data:
+  name: pl
+  path: ./data/crossdocked_v1.1_rmsd1.0_processed
+  split: ./data/split_by_name.pt
+  mode: full
+  include_dummy_atoms: False
+  version: ref_prior_aromatic
+  prior_mode: ref_prior
+  transform:
+    add_ord_feat: False
+    ligand_atom_mode: basic
+    ligand_bond_mode: fc
+    max_num_arms: 10
+    random_rot: False
+
+model:
+  # checkpoint: pretrained_models/uni_o2_bond.pt
+    # checkpoint: /home/amna.alhosani/DecompDiff/logs_diffusion_full/training_2023_10_16__19_59_05/checkpoints/46000.pt
+    # checkpoint: /home/amna.alhosani/DecompDiff/logs_diffusion_full/training_2023_10_23__15_32_07/checkpoints/326000.pt
+    # checkpoint: /home/amna.alhosani/DecompDiff/logs_diffusion_full/training_2023_10_23__15_32_07/checkpoints/480000.pt
+    # checkpoint: /home/amna.alhosani/DecompDiff/logs_diffusion_full/training_2023_10_16__19_59_05/checkpoints/54000.pt
+    # checkpoint: /home/amna.alhosani/DecompDiff/logs_diffusion_full/training_2024_01_30__22_13_22/checkpoints/46000.pt
+    # checkpoint: /home/amna.alhosani/DecompDiff/logs_diffusion_full/training_2024_01_31__15_35_57/checkpoints/46000.pt
+    # checkpoint: /home/amna.alhosani/DecompDiff/logs_diffusion_full/training_2024_02_01__13_01_50/checkpoints/46000.pt
+    checkpoint: /home/amna.alhosani/DecompDiff/logs_diffusion_full/training_2024_02_05__19_08_00/checkpoints/46000.pt
+    # checkpoint: /home/amna.alhosani/DecompDiff/logs_diffusion_full/training_2024_02_05__19_19_44/checkpoints/46000.pt
+sample:
+  seed: 2021
+  gen_mode: complete
+  init_pos_mode: protein_center
+  prior_mode: ref_prior
+  num_samples: 10
+  num_steps: 1000
+  pos_only: False
+  center_pos_mode: protein
+  sample_num_atoms: prior
+  arms_num_atoms_config: ./utils/evaluation/arm_num_config.pkl
+  scaffold_num_atoms_config: ./utils/evaluation/scaffold_num_config.pkl
+  energy_drift:
+    - type: armsca_prox
+      min_d: 1.2
+      max_d: 1.9
+    - type: clash
+      sigma: 2
+      gamma: 4
