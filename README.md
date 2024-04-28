@@ -40,9 +40,9 @@ To sample molecules given protein pockets in the test set, you need to download 
 ```bash
 python scripts/sample_diffusion_decomp.py configs/sampling_drift.yml  \
   --outdir $SAMPLE_OUT_DIR -i $DATA_ID --prior_mode {ref_prior, beta_prior}
-
-If you want to sample molecules with beta priors, you also need to download files in this [directory](https://drive.google.com/drive/folders/1QOQOuDxdKkipYygZU9OIQUXqV9C28J5O?usp=share_link).
 ```
+If you want to sample molecules with beta priors, you also need to download files in this [directory](https://drive.google.com/drive/folders/1QOQOuDxdKkipYygZU9OIQUXqV9C28J5O?usp=share_link).
+
 
 ## Evaluation
 ```bash
