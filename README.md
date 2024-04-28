@@ -1,4 +1,6 @@
 # PLBP: Protein-Ligand Binding Prediction through Diffusion Models
+This repository is the official implementation of PLBP: Protein-Ligand Binding Prediction through Diffusion Models, inspired by _DecompDiff: Diffusion Models with Decomposed Priors for Structure-Based Drug Design._
+
 
 ## Dependencies
 ### Install via Conda and Pip
