@@ -1,6 +1,7 @@
 # Copyright 2023 ByteDance and/or its affiliates.
 # SPDX-License-Identifier: CC-BY-NC-4.0
 
+# This training file has been edited to continue training from the last checkpoint.
 
 import argparse
 import os
