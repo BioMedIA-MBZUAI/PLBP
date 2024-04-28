@@ -1,7 +1,7 @@
 # PLBP: Protein-Ligand Binding Prediction through Diffusion Models
 
 ## Dependencies
-### Install Via Conda and Pip
+### Install via Conda and Pip
 ```bash
 conda create -n decompdiff_new python=3.8
 conda activate decompdiff_new
