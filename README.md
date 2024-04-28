@@ -25,6 +25,7 @@ python -m pip install git+https://github.com/Valdes-Tresanco-MS/AutoDockTools_py
 ```bash
 python scripts/data/preparation/preprocess_subcomplex.py configs/preprocessing/crossdocked.yml
 ```
+The processed dataset file is provided [here](https://drive.google.com/drive/folders/1z74dKcDKQbwpo8Uf8EJpGi12T4GCD8_Z?usp=share_link).
 
 ## Training
 To train the model from scratch, you need to download the *.lmdb, *_name2id.pt and split_by_name.pt files and put them in the _data_ directory. Then, you can run the following command:
